@@ -49,7 +49,7 @@ function gotposes(results)
 function draw() {
     Image(video, 0, 0, 600, 500);
 
-    FileList("#FF0000");
+    fill("#FF0000");
     stroke("#FF0000");
 
     if(scoreRightWrist > 0.2)
