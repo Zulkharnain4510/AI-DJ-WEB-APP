@@ -26,22 +26,22 @@ function setup() {
 function modelLoaded() {
     console.log('poseNet Is Initialized');
 }
-function gotposes(result)
+function gotposes(results)
 {
-    if(result.length > 0)
+    if(results.length > 0)
     {
 
-        console.log(result);
-        scoreRightWrist =  result[0].pose.keypoints[10].score;
-        scoreLeftWrist =  result[0].pose.keypoints[9].score;
+        console.log(results);
+        scoreRightWrist =  results[0].pose.keypoints[10].score;
+        scoreLeftWrist =  results[0].pose.keypoints[9].score;
         console.log("scoreRightWrist = " + scoreRightWrist + "scoreLeftWrist = " + scoreLeftWrist);
 
-        leftWristX = result[0].pose.leftWrist.x;
-        leftWristY = result[0].pose.leftWrist.y;
+        leftWristX = results[0].pose.leftWrist.x;
+        leftWristY = results[0].pose.leftWrist.y;
         console.log("leftWristX = " + leftWristX +" leftWristY= "+ leftWristY);
 
-        rightWristX = result[0].pose.rightWrist.x;
-        rightWristY = result[0].pose.rightWrist.y;
+        rightWristX = results[0].pose.rightWrist.x;
+        rightWristY = results[0].pose.rightWrist.y;
         console.log("leftWristX = " + leftWristX +" leftWristY= "+ leftWristY);
 
     }
